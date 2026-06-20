@@ -1,0 +1,278 @@
+    * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background-color:#0f172a;
+color: #e2e8f0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                padding: 20px;
+                font-family: system-ui, -apple-system, sans-serif;
+            }
+            .prt {
+                border: 3px solid white;
+                padding: 25px 20px;
+                width: 100%;
+                max-width: 480px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                margin-bottom: 50px;
+            }
+            .prt h1 {
+                text-align: center;
+                font-family: 'Courier New', monospace;
+                font-size: 26px;
+                padding-bottom: 5px;
+            }
+            .inp-btn {
+                display: flex;
+                width: 100%;
+            }
+            .inp-btn input {
+                flex: 1;
+                font-size: 20px;
+                padding: 14px 16px;
+                border: 3px solid white;
+                border-right: none;
+                background: transparent;
+          color: #e2e8f0;
+                outline: none;
+            }
+            .inp-btn button {
+                padding: 14px 22px;
+                font-size: 18px;
+                border: 3px solid white;
+background-color: #006b99 ;              color: #e2e8f0;
+                font-weight: 600;
+                cursor: pointer;
+            }
+         
+            .ch {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                margin-top: 8px;
+            }
+            .task-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border: 2px solid white;
+                border-radius: 6px;
+                gap: 10px;
+                padding: 12px 15px;
+                background-color:#0f172a;
+                    animation: taskAppear 0.4s ease;
+
+            }
+
+    @keyframes taskAppear {
+        from{
+            opacity: 0;
+            transform: translateY(-15px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+           
+            .task-text {
+                font-size: 20px;
+                word-break: break-word;
+                flex: 1;
+                padding-right: 10px;
+            }
+            #topBtn{
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border: none;
+    
+        text-align: center;
+        border-radius: 50%;
+        font-size: 30px;
+        cursor: pointer;
+        display: none;
+    }   
+            .del-btn {
+                background: transparent;
+                border: 2px solid white;
+                color: white;
+                font-size: 20px;
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                border-radius: 4px;
+                flex-shrink: 0;
+                transition-duration: 0.3s;
+            }
+            .del-btn:hover {
+                background: #c9667b;
+                border-color: #c9667b;
+                color: #ffd2dc;
+
+            }
+            .com{
+                    cursor: pointer;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                width: 36px;
+                height: 36px;
+                background: transparent;
+                border: 2px solid white;
+                            transition-duration: 0.2s;
+
+            }
+        
+
+            @media (max-width: 480px) {
+                .prt h1 {
+                    font-size: 22px;
+                }
+                .inp-btn input {
+                    font-size: 18px;
+                    padding: 12px;
+                }
+                .inp-btn button {
+                    font-size: 15px;
+                    padding: 12px 12px;
+                }
+                .task-text {
+                    font-size: 18px;
+                }
+            }
+            @media (max-width: 450px) {
+        .del-btn{
+            background: #b42040;
+                border-color: #b42040;
+                color: #ffd2dc;
+        }
+    
+
+    }
+                @media (max-width: 425px) {
+                .prt h1 {
+                    font-size: 22px;
+                }
+                .inp-btn input {
+                    font-size: 18px;
+                    padding: 12px;
+                }
+                .inp-btn button {
+                    font-size: 15px;
+                    padding: 12px 12px;
+                }
+                .task-text {
+                    font-size: 17px;
+                }
+                        body {
+                background-color:#0f172a ;
+               color: #e2e8f0;
+                display: flex;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 20px;
+                font-family: system-ui, -apple-system, sans-serif;
+            }
+            }
+                @media (max-width: 393px) {
+                .prt h1 {
+                    font-size: 22px;
+                }
+                .inp-btn input {
+                    font-size: 17px;
+                    padding: 12px;
+                    width: 100%;
+                }
+                .inp-btn button {
+                    font-size: 15px;
+                    padding: 12px 12px;
+                }
+                .task-text {
+                    font-size: 17px;
+                }
+            }
+                @media (max-width: 375px) {
+                .prt h1 {
+                    font-size: 22px;
+                }
+                .inp-btn input {
+                    font-size: 17px;
+                    padding: 12px;
+                    width: 100%;
+                }
+                .inp-btn button {
+                    font-size: 15px;
+                    padding: 7px;
+                }
+                .task-text {
+                    font-size: 17px;
+                }
+            }
+            @media (max-width: 280px) {
+
+        .prt{
+            padding: 15px 10px;
+        }
+
+        .prt h1{
+            font-size: 18px;
+        }
+
+        .inp-btn{
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .inp-btn input{
+            width: 100%;
+            border-right: 3px solid white;
+            font-size: 16px;
+        }
+
+        .inp-btn button{
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .task-row{
+            padding: 8px;
+            gap: 5px;
+        }
+
+        .task-text{
+            font-size: 16px;
+            padding-right: 5px;
+        }
+
+        .com,
+        .del-btn{
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+        }
+
+        #topBtn{
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            right: 10px;
+            bottom: 10px;
+        }
+    }
