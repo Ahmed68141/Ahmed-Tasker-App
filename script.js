@@ -7,11 +7,9 @@ const input = document.getElementById("taskInput");
             const value = input.value.trim();
             if (value === "") return;
 
-            // Create new task row
             const row = document.createElement("div");
             row.className = "task-row";
 
-            // Task text
             const text = document.createElement("span");
             text.className = "task-text";
             text.textContent = value;
@@ -35,34 +33,27 @@ const input = document.getElementById("taskInput");
         text.style.textDecoration = "none";
     }  
             });
-            // Delete button
             const delBtn = document.createElement("button");
             delBtn.className = "del-btn";
             delBtn.textContent = "×";
 
           
 
-            // Delete functionality
             delBtn.addEventListener("click", function() {
                 row.remove();
             });
 
-            // Add elements to row
-            row.prepend(text);
-            row.prepend(com);
-            row.prepend(delBtn);
-            // Add row to task list
+       row.appendChild(text);
+row.appendChild(com);
+row.appendChild(delBtn);
             taskList.prepend(row);
 
-            // Clear input
             input.value = "";
             input.focus();
         }
 
-        // Button click
         submitBtn.addEventListener("click", addTask);
 
-        // Enter key
         input.addEventListener("keydown", function(e) {
             if (e.key === "Enter") {
                 addTask();
