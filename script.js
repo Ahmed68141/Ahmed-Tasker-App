@@ -1,33 +1,4 @@
-// let inp = document.querySelector("input");
-// let ans = document.querySelector(".ch");
-// let btn = document.getElementById("btn");
-// function task(){
-//    if(inp.value.trim() === "")return;
-// let row = document.querySelector("div")
-//    row.classList.add("task-row");
-//    let new1 = document.createElement("p");
-//    new1.classList.add("p");
-//    new1.textContent=inp.value;
-// let btn2 = document.createElement("button")
-//    btn2.textContent="×";
-//       btn2.classList.add("del-btn");
-//       btn.addEventListener("click",function () {
-//         row.remove();
-//       })
 
-//    row.prepend(new1)
-//       row.prepend(btn2)
-//       ans.prepend(row)
-
-//    inp.value="";
-//    inp.focus();
-// }
-// btn.addEventListener("click",task);
-// inp.addEventListener("keydown",function(v){
-//     if (v.key === "Enter") {
-//         task();
-//     }
-// })
 const input = document.getElementById("taskInput");
         const submitBtn = document.getElementById("submitBtn");
         const taskList = document.getElementById("taskList");
